@@ -59,6 +59,41 @@
         </div>
     </header>
 
+    <div class="modal-overlay" id="registerModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2 class="modal-title">Регистрация</h2>
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Имя</label>
+                    <input type="text" id="regName" name="name" required placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="regPhone">Номер телефона</label>
+                    <input type="tel" id="regPhone" name="phone" required placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" name="email" required placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Пароль</label>
+                    <input type="password" id="regPassword" name="password" required placeholder="Минимум 8 символов" minlength="8">
+                </div>
+                <div class="form-group">
+                    <label for="regPasswordConfirm">Подтвердите пароль</label>
+                    <input type="password" id="regPasswordConfirm" name="passwordConfirm" required placeholder="Повторите пароль">
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="regAgree" name="agree" required>
+                    <label for="regAgree">Согласен с условиями использования</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Зарегистрироваться</button>
+                <p class="modal-footer-text">Уже есть аккаунт? <a href="#" id="loginLink">Войти</a></p>
+            </form>
+        </div>
+    </div>
+
     <main class="main">
         <section class="hero">
             <div class="container">

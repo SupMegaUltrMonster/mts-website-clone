@@ -86,4 +86,52 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
     });
+
+    const profileBtn = document.querySelector('.profile-btn');
+    const registerModal = document.getElementById('registerModal');
+    const modalClose = document.getElementById('modalClose');
+    const registerForm = document.getElementById('registerForm');
+
+    if (profileBtn) {
+        profileBtn.addEventListener('click', function() {
+            registerModal.classList.add('active');
+        });
+    }
+
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            registerModal.classList.remove('active');
+        });
+    }
+
+    if (registerModal) {
+        registerModal.addEventListener('click', function(e) {
+            if (e.target === registerModal) {
+                registerModal.classList.remove('active');
+            }
+        });
+    }
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('regPassword').value;
+            const passwordConfirm = document.getElementById('regPasswordConfirm').value;
+            
+            if (password !== passwordConfirm) {
+                alert('Пароли не совпадают');
+                return;
+            }
+            
+            if (password.length < 8) {
+                alert('Пароль должен содержать минимум 8 символов');
+                return;
+            }
+            
+            alert('Регистрация успешна!');
+            registerModal.classList.remove('active');
+            registerForm.reset();
+        });
+    }
 });
