@@ -208,10 +208,146 @@ body {
     padding: 60px 0;
 }
 
+.quick-actions-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    align-items: start;
+}
+
+.quick-actions-banner {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-radius: 20px;
+    padding: 32px;
+    color: white;
+    position: sticky;
+    top: 120px;
+    overflow: hidden;
+}
+
+.banner-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.banner-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.banner-text {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.banner-btn {
+    width: 100%;
+}
+
+.banner-phone {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-phone svg {
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
 .quick-actions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+}
+
+.quick-actions-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 24px;
+    align-items: start;
+}
+
+.quick-actions-banner {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #b8050f 100%);
+    border-radius: 20px;
+    padding: 32px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.quick-actions-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.banner-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.banner-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.banner-text {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.banner-btn {
+    background: white;
+    color: var(--color-primary);
+    width: fit-content;
+}
+
+.banner-btn:hover {
+    background: var(--color-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.banner-phone {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    opacity: 0.3;
+}
+
+.banner-phone svg {
+    width: 120px;
+    height: auto;
 }
 
 .quick-action-card {
@@ -877,6 +1013,10 @@ body {
     
     .promo-title {
         font-size: 28px;
+    }
+    
+    .quick-actions-wrapper {
+        grid-template-columns: 1fr;
     }
 }
 
