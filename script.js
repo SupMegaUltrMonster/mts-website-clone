@@ -134,4 +134,28 @@ document.addEventListener('DOMContentLoaded', function() {
             registerForm.reset();
         });
     }
+
+    const cookieBanner = document.getElementById('cookieBanner');
+    const acceptCookiesBtn = document.getElementById('acceptCookies');
+
+    if (!localStorage.getItem('cookiesAccepted')) {
+        setTimeout(function() {
+            if (cookieBanner) {
+                cookieBanner.classList.remove('hidden');
+            }
+        }, 1000);
+    } else {
+        if (cookieBanner) {
+            cookieBanner.classList.add('hidden');
+        }
+    }
+
+    if (acceptCookiesBtn) {
+        acceptCookiesBtn.addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            if (cookieBanner) {
+                cookieBanner.classList.add('hidden');
+            }
+        });
+    }
 });
