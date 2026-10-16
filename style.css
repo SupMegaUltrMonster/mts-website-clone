@@ -159,6 +159,79 @@ body {
     opacity: 0.95;
 }
 
+/* eSIM Steps */
+.esim-steps {
+    padding: 60px 0;
+    background: var(--color-background);
+}
+
+.steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.step-item {
+    flex: 1;
+    text-align: center;
+    padding: 24px 16px;
+    background: var(--color-background-lower);
+    border-radius: 16px;
+    transition: var(--transition);
+}
+
+.step-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 auto 12px;
+}
+
+.step-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.step-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.step-text {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+}
+
+.step-arrow {
+    font-size: 24px;
+    color: var(--color-border);
+    flex-shrink: 0;
+}
+
+.steps-cta {
+    text-align: center;
+}
+
+.steps-cta .btn {
+    min-width: 280px;
+}
+
 .btn {
     display: inline-block;
     padding: 14px 32px;
@@ -1124,6 +1197,14 @@ body {
     
     .quick-actions-wrapper {
         grid-template-columns: 1fr;
+    }
+    
+    .steps-container {
+        flex-wrap: wrap;
+    }
+    
+    .step-arrow {
+        display: none;
     }
 }
 
