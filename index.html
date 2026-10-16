@@ -517,25 +517,28 @@
         </div>
     </div>
 
+    <script src="firebase-service.js"></script>
+    
     <!-- Firebase Initialization -->
-    <script type="module">
-        import { initFirebase } from './firebase-service.js';
-        
-        // Замените на свои значения из https://console.firebase.google.com/
+    <script>
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "YOUR_SENDER_ID",
-            appId: "YOUR_APP_ID"
+            apiKey: "AIzaSyCfF0F_mJxPRWC3nK1psdH0pQVoFjOhejU",
+            authDomain: "her-project-c3271.firebaseapp.com",
+            projectId: "her-project-c3271",
+            storageBucket: "her-project-c3271.firebasestorage.app",
+            messagingSenderId: "321608294907",
+            appId: "1:321608294907:web:f54566012e34cfc568ab5e",
+            measurementId: "G-13KB17ZJQ7"
         };
 
         try {
-            await initFirebase(firebaseConfig);
-            console.log('✅ Firebase подключён');
+            window.firebaseService.init(firebaseConfig).then(() => {
+                console.log('✅ Firebase подключён');
+            }).catch((error) => {
+                console.warn('⚠️ Firebase не подключён:', error.message);
+            });
         } catch (error) {
-            console.warn('⚠️ Firebase не подключён. Заполните config в index.html');
+            console.warn('⚠️ Firebase ошибка:', error.message);
         }
     </script>
     
