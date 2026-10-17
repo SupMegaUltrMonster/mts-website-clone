@@ -6,10 +6,6 @@
     <title>МТС - связь и экосистема цифровых сервисов</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
 </head>
 <body>
     <header class="header">
@@ -517,31 +513,7 @@
         </div>
     </div>
 
-    <script src="firebase-service.js"></script>
-    
-    <!-- Firebase Initialization -->
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyCfF0F_mJxPRWC3nK1psdH0pQVoFjOhejU",
-            authDomain: "her-project-c3271.firebaseapp.com",
-            databaseURL: "https://her-project-c3271-default-rtdb.firebaseio.com",
-            projectId: "her-project-c3271",
-            storageBucket: "her-project-c3271.firebasestorage.app",
-            messagingSenderId: "321608294907",
-            appId: "1:321608294907:web:f54566012e34cfc568ab5e",
-            measurementId: "G-13KB17ZJQ7"
-        };
-
-        try {
-            window.firebaseService.init(firebaseConfig).then(() => {
-                console.log('✅ Firebase подключён');
-            }).catch((error) => {
-                console.warn('⚠️ Firebase не подключён:', error.message);
-            });
-        } catch (error) {
-            console.warn('⚠️ Firebase ошибка:', error.message);
-        }
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
     
     <script src="script.js"></script>
 </body>

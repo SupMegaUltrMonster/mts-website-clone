@@ -1,4 +1,273 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Page load animation
+    anime({
+        targets: '.header',
+        opacity: [0, 1],
+        translateY: [-20, 0],
+        duration: 600,
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.hero-content',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 800,
+        delay: 300,
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.esim-steps .container > *',
+        opacity: [0, 1],
+        translateY: [40, 0],
+        duration: 700,
+        delay: anime.stagger(100, {start: 500}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.quick-actions-grid .quick-action-card',
+        opacity: [0, 1],
+        translateY: [50, 0],
+        duration: 600,
+        delay: anime.stagger(100, {start: 600}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.quick-actions-banner',
+        opacity: [0, 1],
+        translateX: [60, 0],
+        duration: 800,
+        delay: 800,
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.services-grid .service-card',
+        opacity: [0, 1],
+        scale: [0.9, 1],
+        duration: 500,
+        delay: anime.stagger(80, {start: 700}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.promo-slider .container',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 700,
+        delay: 900,
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.quick-services-grid .quick-service-item',
+        opacity: [0, 1],
+        translateX: [-30, 0],
+        duration: 500,
+        delay: anime.stagger(80, {start: 1000}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.support .container > *',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 600,
+        delay: anime.stagger(100, {start: 1100}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.tabs-section .container > *',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 600,
+        delay: anime.stagger(100, {start: 1200}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.about-grid .about-card',
+        opacity: [0, 1],
+        translateY: [40, 0],
+        duration: 600,
+        delay: anime.stagger(100, {start: 1300}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.news-grid .news-card',
+        opacity: [0, 1],
+        translateY: [40, 0],
+        duration: 600,
+        delay: anime.stagger(100, {start: 1400}),
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.app-download .container',
+        opacity: [0, 1],
+        translateY: [30, 0],
+        duration: 700,
+        delay: 1500,
+        easing: 'easeOutQuad'
+    });
+
+    anime({
+        targets: '.footer',
+        opacity: [0, 1],
+        translateY: [20, 0],
+        duration: 600,
+        delay: 1600,
+        easing: 'easeOutQuad'
+    });
+
+    // Button animations
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+            anime({
+                targets: this,
+                scale: 1.05,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+        btn.addEventListener('mouseleave', function() {
+            anime({
+                targets: this,
+                scale: 1,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+        btn.addEventListener('mousedown', function() {
+            anime({
+                targets: this,
+                scale: 0.97,
+                duration: 100,
+                easing: 'easeOutQuad'
+            });
+        });
+        btn.addEventListener('mouseup', function() {
+            anime({
+                targets: this,
+                scale: 1.05,
+                duration: 100,
+                easing: 'easeOutQuad'
+            });
+        });
+    });
+
+    // Slider button animations
+    const sliderBtns = document.querySelectorAll('.slider-btn');
+    sliderBtns.forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+            anime({
+                targets: this,
+                scale: 1.15,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+        btn.addEventListener('mouseleave', function() {
+            anime({
+                targets: this,
+                scale: 1,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+    });
+
+    // Tab button animations
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+            anime({
+                targets: this,
+                scale: 1.05,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+        btn.addEventListener('mouseleave', function() {
+            anime({
+                targets: this,
+                scale: 1,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+    });
+
+    // Search and profile button animations
+    const actionBtns = document.querySelectorAll('.search-btn, .profile-btn');
+    actionBtns.forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+            anime({
+                targets: this,
+                scale: 1.1,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+        btn.addEventListener('mouseleave', function() {
+            anime({
+                targets: this,
+                scale: 1,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+    });
+
+    // Support link animations
+    const supportLinks = document.querySelectorAll('.support-link');
+    supportLinks.forEach(function(link) {
+        link.addEventListener('mouseenter', function() {
+            anime({
+                targets: this,
+                scale: 1.05,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+        link.addEventListener('mouseleave', function() {
+            anime({
+                targets: this,
+                scale: 1,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+    });
+
+    // App button animations
+    const appBtns = document.querySelectorAll('.app-btn');
+    appBtns.forEach(function(btn) {
+        btn.addEventListener('mouseenter', function() {
+            anime({
+                targets: this,
+                scale: 1.05,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+        btn.addEventListener('mouseleave', function() {
+            anime({
+                targets: this,
+                scale: 1,
+                duration: 200,
+                easing: 'easeOutQuad'
+            });
+        });
+    });
+
     const slider = document.querySelector('.slider');
     if (slider) {
         const track = slider.querySelector('.slider-track');
